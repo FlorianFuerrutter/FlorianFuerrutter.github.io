@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "Florian Fürrutter",
+    "section": "Experience",
+    "text": "Experience"
+  },
+  {
+    "objectID": "hello.html",
+    "href": "hello.html",
+    "title": "Overview",
+    "section": "",
+    "text": "For a demonstration of a line plot on a polar axis, see Figure 1. Equation 1\n\\mathcal{L} \\tag{1}\n(Wikipedia 2022)\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nfor i in range(2):\n    r = np.arange(0, 2, 0.01)\n    theta = 8 * np.pi * r\n    fig, ax = plt.subplots(\n      subplot_kw = {'projection': 'polar'} \n    )\n    fig.set_size_inches(2,2)\n\n    ax.plot(theta, r)\n    ax.set_rticks([0.5, 1, 1.5, 2])\n    ax.grid(True)\n    plt.show()\n\n\n\n\n\n\n\n\n(a) Gapminder: 1957\n\n\n\n\n\n\n\n(b) Gapminder: 2007\n\n\n\n\nFigure 1: Life Expectancy and GDP"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Sweet home."
+  }
+]
