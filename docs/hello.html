@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Florian Fürrutter">
-<meta name="dcterms.date" content="2022-12-03">
+<meta name="dcterms.date" content="2022-12-25">
 
 <title>Home - Overview</title>
 <style>
@@ -169,6 +169,10 @@ cookieconsent.run({
 });
 </script> 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -268,7 +272,7 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Overview</h1>
+<div class="quarto-title-block"><div><h1 class="title">Overview</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -285,7 +289,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">December 3, 2022</p>
+      <p class="date">December 25, 2022</p>
     </div>
   </div>
   
@@ -297,29 +301,49 @@ cookieconsent.run({
 
 <section id="sec-plot" class="level2 page-columns page-full" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="sec-plot"><span class="header-section-number">1</span> Polar Axis</h2>
-<p>For a demonstration of a line plot on a polar axis, see <a href="#fig-polar">Figure&nbsp;1</a>. <a href="#eq-stddev">Equation&nbsp;1</a></p>
-<p><span id="eq-stddev"><span class="math display">\mathcal{L} \tag{1}</span></span></p>
-<p><span class="citation" data-cites="FP1">(<a href="#ref-FP1" role="doc-biblioref">Wikipedia 2022</a>)</span></p>
+<p>For a demonstration of a line plot on a polar axis, see <a href="#fig-polar">Figure&nbsp;1</a>. <a href="#eq-stddev">Equation&nbsp;2</a></p>
+<p>Black-Scholes (<a href="#eq-black-scholes">Equation&nbsp;1</a>) is a mathematical model that seeks to explain the behavior of financial derivatives, most commonly options:</p>
+<p><span id="eq-black-scholes"><span class="math display">
+\frac{\partial \mathrm C}{ \partial \mathrm t } + \frac{1}{2}\sigma^{2} \mathrm S^{2}
+\frac{\partial^{2} \mathrm C}{\partial \mathrm C^2}
+  + \mathrm r \mathrm S \frac{\partial \mathrm C}{\partial \mathrm S}\ =
+  \mathrm r \mathrm C
+\tag{1}</span></span></p>
+<p><span class="math display">\mathcal{M}</span></p>
+<p><span id="eq-stddev"><span class="math display">\mathcal{L} \tag{2}</span></span></p>
+<p><span class="citation" data-cites="FP1">(<a href="#ref-FP1" role="doc-biblioref">Wikipedia 2022</a>)</span> <a href="#eq-stddev">Equation&nbsp;2</a> <strong>?@eq-stddev1</strong></p>
+<div class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;slide&quot;}" data-tags="[]">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>i <span class="op">=</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-slideshow="{&quot;slide_type&quot;:&quot;fragment&quot;}" data-tags="[]">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>i <span class="op">+</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <div class="page-columns page-full">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
-<span id="cb1-5"><a href="#cb1-5"></a>    r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb1-6"><a href="#cb1-6"></a>    theta <span class="op">=</span> <span class="dv">8</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb1-7"><a href="#cb1-7"></a>    fig, ax <span class="op">=</span> plt.subplots(</span>
-<span id="cb1-8"><a href="#cb1-8"></a>      subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
-<span id="cb1-9"><a href="#cb1-9"></a>    )</span>
-<span id="cb1-10"><a href="#cb1-10"></a>    fig.set_size_inches(<span class="dv">2</span>,<span class="dv">2</span>)</span>
-<span id="cb1-11"><a href="#cb1-11"></a></span>
-<span id="cb1-12"><a href="#cb1-12"></a>    ax.plot(theta, r)</span>
-<span id="cb1-13"><a href="#cb1-13"></a>    ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb1-14"><a href="#cb1-14"></a>    ax.grid(<span class="va">True</span>)</span>
-<span id="cb1-15"><a href="#cb1-15"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
+<span id="cb3-5"><a href="#cb3-5"></a>    r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb3-6"><a href="#cb3-6"></a>    theta <span class="op">=</span> <span class="dv">8</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb3-7"><a href="#cb3-7"></a>    fig, ax <span class="op">=</span> plt.subplots(</span>
+<span id="cb3-8"><a href="#cb3-8"></a>      subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
+<span id="cb3-9"><a href="#cb3-9"></a>    )</span>
+<span id="cb3-10"><a href="#cb3-10"></a>    fig.set_size_inches(<span class="dv">2</span>,<span class="dv">2</span>)</span>
+<span id="cb3-11"><a href="#cb3-11"></a></span>
+<span id="cb3-12"><a href="#cb3-12"></a>    ax.plot(theta, r)</span>
+<span id="cb3-13"><a href="#cb3-13"></a>    ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb3-14"><a href="#cb3-14"></a>    ax.grid(<span class="va">True</span>)</span>
+<span id="cb3-15"><a href="#cb3-15"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="fig-polar" class="cell column-page quarto-layout-panel" data-execution="{&quot;iopub.execute_input&quot;:&quot;2022-12-02T17:12:34.829991Z&quot;,&quot;iopub.status.busy&quot;:&quot;2022-12-02T17:12:34.829991Z&quot;,&quot;iopub.status.idle&quot;:&quot;2022-12-02T17:12:35.090277Z&quot;,&quot;shell.execute_reply&quot;:&quot;2022-12-02T17:12:35.090277Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2022-12-02T17:12:34.829991Z&quot;}" data-tags="[]" data-execution_count="8">
+<div id="fig-polar" class="cell column-page quarto-layout-panel" data-execution="{&quot;iopub.execute_input&quot;:&quot;2022-12-16T20:41:56.929907Z&quot;,&quot;iopub.status.busy&quot;:&quot;2022-12-16T20:41:56.929907Z&quot;,&quot;iopub.status.idle&quot;:&quot;2022-12-16T20:41:57.495808Z&quot;,&quot;shell.execute_reply&quot;:&quot;2022-12-16T20:41:57.495808Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2022-12-16T20:41:56.929907Z&quot;}" data-slideshow="{&quot;slide_type&quot;:&quot;slide&quot;}" data-tags="[]" data-execution_count="2">
 <figure class="figure">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="cell-output cell-output-display quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
@@ -341,6 +365,126 @@ cookieconsent.run({
 </div>
 <p></p><figcaption class="figure-caption">Figure&nbsp;1: Life Expectancy and GDP</figcaption><p></p>
 </figure>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2022-12-03T16:54:12.057722Z&quot;,&quot;iopub.status.busy&quot;:&quot;2022-12-03T16:54:12.057722Z&quot;,&quot;iopub.status.idle&quot;:&quot;2022-12-03T16:54:12.084745Z&quot;,&quot;shell.execute_reply&quot;:&quot;2022-12-03T16:54:12.084745Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2022-12-03T16:54:12.057722Z&quot;}" data-tags="[]" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">from</span> math <span class="im">import</span> pi</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="im">from</span> ipywidgets <span class="im">import</span> Button</span>
+<span id="cb4-5"><a href="#cb4-5"></a></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="im">from</span> ipycanvas <span class="im">import</span> Canvas, hold_canvas</span>
+<span id="cb4-7"><a href="#cb4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8"></a></span>
+<span id="cb4-9"><a href="#cb4-9"></a>     </span>
+<span id="cb4-10"><a href="#cb4-10"></a></span>
+<span id="cb4-11"><a href="#cb4-11"></a>canvas <span class="op">=</span> Canvas(width<span class="op">=</span><span class="dv">300</span>, height<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb4-12"><a href="#cb4-12"></a></span>
+<span id="cb4-13"><a href="#cb4-13"></a></span>
+<span id="cb4-14"><a href="#cb4-14"></a>     </span>
+<span id="cb4-15"><a href="#cb4-15"></a></span>
+<span id="cb4-16"><a href="#cb4-16"></a><span class="kw">def</span> recursive_draw_leaf(canvas, length, r_angle, r_factor, l_angle, l_factor):</span>
+<span id="cb4-17"><a href="#cb4-17"></a>    canvas.stroke_line(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span>length)</span>
+<span id="cb4-18"><a href="#cb4-18"></a>    canvas.translate(<span class="dv">0</span>, <span class="op">-</span>length)</span>
+<span id="cb4-19"><a href="#cb4-19"></a></span>
+<span id="cb4-20"><a href="#cb4-20"></a>    <span class="cf">if</span> length <span class="op">&gt;</span> <span class="dv">5</span>:</span>
+<span id="cb4-21"><a href="#cb4-21"></a>        canvas.save()</span>
+<span id="cb4-22"><a href="#cb4-22"></a></span>
+<span id="cb4-23"><a href="#cb4-23"></a>        canvas.rotate(r_angle)</span>
+<span id="cb4-24"><a href="#cb4-24"></a>        recursive_draw_leaf(</span>
+<span id="cb4-25"><a href="#cb4-25"></a>            canvas, length <span class="op">*</span> r_factor, r_angle, r_factor, l_angle, l_factor</span>
+<span id="cb4-26"><a href="#cb4-26"></a>        )</span>
+<span id="cb4-27"><a href="#cb4-27"></a></span>
+<span id="cb4-28"><a href="#cb4-28"></a>        canvas.restore()</span>
+<span id="cb4-29"><a href="#cb4-29"></a></span>
+<span id="cb4-30"><a href="#cb4-30"></a>        canvas.save()</span>
+<span id="cb4-31"><a href="#cb4-31"></a></span>
+<span id="cb4-32"><a href="#cb4-32"></a>        canvas.rotate(l_angle)</span>
+<span id="cb4-33"><a href="#cb4-33"></a>        recursive_draw_leaf(</span>
+<span id="cb4-34"><a href="#cb4-34"></a>            canvas, length <span class="op">*</span> l_factor, r_angle, r_factor, l_angle, l_factor</span>
+<span id="cb4-35"><a href="#cb4-35"></a>        )</span>
+<span id="cb4-36"><a href="#cb4-36"></a></span>
+<span id="cb4-37"><a href="#cb4-37"></a>        canvas.restore()</span>
+<span id="cb4-38"><a href="#cb4-38"></a></span>
+<span id="cb4-39"><a href="#cb4-39"></a></span>
+<span id="cb4-40"><a href="#cb4-40"></a>     </span>
+<span id="cb4-41"><a href="#cb4-41"></a></span>
+<span id="cb4-42"><a href="#cb4-42"></a><span class="kw">def</span> draw_tree(canvas):</span>
+<span id="cb4-43"><a href="#cb4-43"></a>    <span class="cf">with</span> hold_canvas():</span>
+<span id="cb4-44"><a href="#cb4-44"></a>        canvas.save()</span>
+<span id="cb4-45"><a href="#cb4-45"></a></span>
+<span id="cb4-46"><a href="#cb4-46"></a>        canvas.clear()</span>
+<span id="cb4-47"><a href="#cb4-47"></a></span>
+<span id="cb4-48"><a href="#cb4-48"></a>        canvas.translate(canvas.width <span class="op">/</span> <span class="fl">2.0</span>, canvas.height)</span>
+<span id="cb4-49"><a href="#cb4-49"></a></span>
+<span id="cb4-50"><a href="#cb4-50"></a>        canvas.stroke_style <span class="op">=</span> <span class="st">"black"</span></span>
+<span id="cb4-51"><a href="#cb4-51"></a></span>
+<span id="cb4-52"><a href="#cb4-52"></a>        r_factor <span class="op">=</span> uniform(<span class="fl">0.6</span>, <span class="fl">0.8</span>)</span>
+<span id="cb4-53"><a href="#cb4-53"></a>        l_factor <span class="op">=</span> uniform(<span class="fl">0.6</span>, <span class="fl">0.8</span>)</span>
+<span id="cb4-54"><a href="#cb4-54"></a></span>
+<span id="cb4-55"><a href="#cb4-55"></a>        r_angle <span class="op">=</span> uniform(pi <span class="op">/</span> <span class="fl">10.0</span>, pi <span class="op">/</span> <span class="fl">5.0</span>)</span>
+<span id="cb4-56"><a href="#cb4-56"></a>        l_angle <span class="op">=</span> uniform(<span class="op">-</span>pi <span class="op">/</span> <span class="fl">5.0</span>, <span class="op">-</span>pi <span class="op">/</span> <span class="fl">10.0</span>)</span>
+<span id="cb4-57"><a href="#cb4-57"></a></span>
+<span id="cb4-58"><a href="#cb4-58"></a>        recursive_draw_leaf(canvas, <span class="dv">150</span>, r_angle, r_factor, l_angle, l_factor)</span>
+<span id="cb4-59"><a href="#cb4-59"></a></span>
+<span id="cb4-60"><a href="#cb4-60"></a>        canvas.restore()</span>
+<span id="cb4-61"><a href="#cb4-61"></a></span>
+<span id="cb4-62"><a href="#cb4-62"></a></span>
+<span id="cb4-63"><a href="#cb4-63"></a>     </span>
+<span id="cb4-64"><a href="#cb4-64"></a></span>
+<span id="cb4-65"><a href="#cb4-65"></a>button <span class="op">=</span> Button(description<span class="op">=</span><span class="st">"Generate tree!"</span>)</span>
+<span id="cb4-66"><a href="#cb4-66"></a></span>
+<span id="cb4-67"><a href="#cb4-67"></a></span>
+<span id="cb4-68"><a href="#cb4-68"></a><span class="kw">def</span> click_callback(<span class="op">*</span>args, <span class="op">**</span>kwargs):</span>
+<span id="cb4-69"><a href="#cb4-69"></a>    <span class="kw">global</span> canvas</span>
+<span id="cb4-70"><a href="#cb4-70"></a></span>
+<span id="cb4-71"><a href="#cb4-71"></a>    draw_tree(canvas)</span>
+<span id="cb4-72"><a href="#cb4-72"></a></span>
+<span id="cb4-73"><a href="#cb4-73"></a></span>
+<span id="cb4-74"><a href="#cb4-74"></a>button.on_click(click_callback)</span>
+<span id="cb4-75"><a href="#cb4-75"></a></span>
+<span id="cb4-76"><a href="#cb4-76"></a></span>
+<span id="cb4-77"><a href="#cb4-77"></a>     </span>
+<span id="cb4-78"><a href="#cb4-78"></a></span>
+<span id="cb4-79"><a href="#cb4-79"></a>draw_tree(canvas)</span>
+<span id="cb4-80"><a href="#cb4-80"></a></span>
+<span id="cb4-81"><a href="#cb4-81"></a></span>
+<span id="cb4-82"><a href="#cb4-82"></a>     </span>
+<span id="cb4-83"><a href="#cb4-83"></a></span>
+<span id="cb4-84"><a href="#cb4-84"></a>display(canvas)</span>
+<span id="cb4-85"><a href="#cb4-85"></a>display(button)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"3c0ae252c39643bcafdfc86597d5adce","version_major":2,"version_minor":0}
+</script>
+</div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"e3b075d313784ca8882ea93df4eff230","version_major":2,"version_minor":0}
+</script>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2022-12-06T15:33:19.592597Z&quot;,&quot;iopub.status.busy&quot;:&quot;2022-12-06T15:33:19.591596Z&quot;,&quot;iopub.status.idle&quot;:&quot;2022-12-06T15:33:19.954927Z&quot;,&quot;shell.execute_reply&quot;:&quot;2022-12-06T15:33:19.954927Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2022-12-06T15:33:19.592597Z&quot;}" data-tags="[]" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">from</span> ipyleaflet <span class="im">import</span> Map, Marker, basemaps, basemap_to_tiles</span>
+<span id="cb5-2"><a href="#cb5-2"></a>m <span class="op">=</span> Map(</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  basemap<span class="op">=</span>basemap_to_tiles(</span>
+<span id="cb5-4"><a href="#cb5-4"></a>    basemaps.NASAGIBS.ModisTerraTrueColorCR, <span class="st">"2017-04-08"</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>  ),</span>
+<span id="cb5-6"><a href="#cb5-6"></a>  center<span class="op">=</span>(<span class="fl">47.26327165045244</span>, <span class="fl">11.400229023615665</span>),</span>
+<span id="cb5-7"><a href="#cb5-7"></a>  zoom<span class="op">=</span><span class="dv">4</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a>)</span>
+<span id="cb5-9"><a href="#cb5-9"></a>m.add_layer(Marker(location<span class="op">=</span>(<span class="fl">47.26327165045244</span>, <span class="fl">11.400229023615665</span>)))</span>
+<span id="cb5-10"><a href="#cb5-10"></a>m</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"98945d54dd444205a9d83ca4b9832fa6","version_major":2,"version_minor":0}
+</script>
 </div>
 </div>
 

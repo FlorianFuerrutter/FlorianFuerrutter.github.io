@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Sweet home."
+  },
+  {
     "objectID": "about.html#experience",
     "href": "about.html#experience",
     "title": "Florian Fürrutter",
@@ -18,13 +25,6 @@
     "href": "hello.html",
     "title": "Overview",
     "section": "",
-    "text": "For a demonstration of a line plot on a polar axis, see Figure 1. Equation 1\n\\mathcal{L} \\tag{1}\n(Wikipedia 2022)\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nfor i in range(2):\n    r = np.arange(0, 2, 0.01)\n    theta = 8 * np.pi * r\n    fig, ax = plt.subplots(\n      subplot_kw = {'projection': 'polar'} \n    )\n    fig.set_size_inches(2,2)\n\n    ax.plot(theta, r)\n    ax.set_rticks([0.5, 1, 1.5, 2])\n    ax.grid(True)\n    plt.show()\n\n\n\n\n\n\n\n\n(a) Gapminder: 1957\n\n\n\n\n\n\n\n(b) Gapminder: 2007\n\n\n\n\nFigure 1: Life Expectancy and GDP"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Home",
-    "section": "",
-    "text": "Sweet home."
+    "text": "For a demonstration of a line plot on a polar axis, see Figure 1. Equation 2\nBlack-Scholes (Equation 1) is a mathematical model that seeks to explain the behavior of financial derivatives, most commonly options:\n\n\\frac{\\partial \\mathrm C}{ \\partial \\mathrm t } + \\frac{1}{2}\\sigma^{2} \\mathrm S^{2}\n\\frac{\\partial^{2} \\mathrm C}{\\partial \\mathrm C^2}\n  + \\mathrm r \\mathrm S \\frac{\\partial \\mathrm C}{\\partial \\mathrm S}\\ =\n  \\mathrm r \\mathrm C\n\\tag{1}\n\\mathcal{M}\n\\mathcal{L} \\tag{2}\n(Wikipedia 2022) Equation 2 ?@eq-stddev1\n\n\nCode\ni = 3\n\n\n\n\nCode\ni + 7\n\n\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nfor i in range(2):\n    r = np.arange(0, 2, 0.01)\n    theta = 8 * np.pi * r\n    fig, ax = plt.subplots(\n      subplot_kw = {'projection': 'polar'} \n    )\n    fig.set_size_inches(2,2)\n\n    ax.plot(theta, r)\n    ax.set_rticks([0.5, 1, 1.5, 2])\n    ax.grid(True)\n    plt.show()\n\n\n\n\n\n\n\n\n(a) Gapminder: 1957\n\n\n\n\n\n\n\n(b) Gapminder: 2007\n\n\n\n\nFigure 1: Life Expectancy and GDP\n\n\n\n\n\nCode\nfrom math import pi\nfrom random import uniform\n\nfrom ipywidgets import Button\n\nfrom ipycanvas import Canvas, hold_canvas\n\n\n     \n\ncanvas = Canvas(width=300, height=300)\n\n\n     \n\ndef recursive_draw_leaf(canvas, length, r_angle, r_factor, l_angle, l_factor):\n    canvas.stroke_line(0, 0, 0, -length)\n    canvas.translate(0, -length)\n\n    if length > 5:\n        canvas.save()\n\n        canvas.rotate(r_angle)\n        recursive_draw_leaf(\n            canvas, length * r_factor, r_angle, r_factor, l_angle, l_factor\n        )\n\n        canvas.restore()\n\n        canvas.save()\n\n        canvas.rotate(l_angle)\n        recursive_draw_leaf(\n            canvas, length * l_factor, r_angle, r_factor, l_angle, l_factor\n        )\n\n        canvas.restore()\n\n\n     \n\ndef draw_tree(canvas):\n    with hold_canvas():\n        canvas.save()\n\n        canvas.clear()\n\n        canvas.translate(canvas.width / 2.0, canvas.height)\n\n        canvas.stroke_style = \"black\"\n\n        r_factor = uniform(0.6, 0.8)\n        l_factor = uniform(0.6, 0.8)\n\n        r_angle = uniform(pi / 10.0, pi / 5.0)\n        l_angle = uniform(-pi / 5.0, -pi / 10.0)\n\n        recursive_draw_leaf(canvas, 150, r_angle, r_factor, l_angle, l_factor)\n\n        canvas.restore()\n\n\n     \n\nbutton = Button(description=\"Generate tree!\")\n\n\ndef click_callback(*args, **kwargs):\n    global canvas\n\n    draw_tree(canvas)\n\n\nbutton.on_click(click_callback)\n\n\n     \n\ndraw_tree(canvas)\n\n\n     \n\ndisplay(canvas)\ndisplay(button)\n\n\n\n\n\n\n\n\n\n\nCode\nfrom ipyleaflet import Map, Marker, basemaps, basemap_to_tiles\nm = Map(\n  basemap=basemap_to_tiles(\n    basemaps.NASAGIBS.ModisTerraTrueColorCR, \"2017-04-08\"\n  ),\n  center=(47.26327165045244, 11.400229023615665),\n  zoom=4\n)\nm.add_layer(Marker(location=(47.26327165045244, 11.400229023615665)))\nm"
   }
 ]
